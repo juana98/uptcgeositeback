@@ -1,0 +1,12 @@
+{
+    
+    "type": "mongodb",
+    "host": "localhost",
+    "username": "myadmin",
+    "password": "mypass",
+    "port": 27017,
+    "database": "uptc",
+    "entities": ["dist/**/*.entity.js"],
+    "synchronize": true
+      
+}
