@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common';
 import { PostService } from './post.service';
 import { Post as PostEntity } from './post.entity';
 
@@ -29,4 +29,8 @@ constructor(
     return this.postService.delete(id);
   }
 
+  @Put(':id')
+  update(@Param('id') id:string,@Body() post:PostEntity){
+    return this.postService.update(id,post);  
+  }
 }

@@ -1,32 +1,28 @@
 import { Column, Entity, ObjectID, ObjectIdColumn } from 'typeorm';
 
 @Entity()
-export class Post {
+export class User {
   @ObjectIdColumn()
   id: ObjectID;
 
   @Column()
   name: string;
+  
+  @Column()
+  username: string;
 
   @Column()
-  description: string;
+  password: string;
 
   @Column()
-  title: string;
+  rol: string;
 
   @Column()
-  filename: string;
+  email: string;
 
   @Column()
-  category: string;
+  isActive: boolean;
+  
 
-  @Column()
-  imageBannerUrl: string;
-
-  @Column()
-  video: string;
-
-  @Column()
-  isPublished: boolean;
 
 }
