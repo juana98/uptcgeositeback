@@ -21,6 +21,12 @@ export class Post {
   category: string;
 
   @Column()
+  image: string;
+
+  @Column()
+  content: string;
+
+  @Column()
   imageBannerUrl: string;
 
   @Column()
